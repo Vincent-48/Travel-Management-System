@@ -1,14 +1,8 @@
 <?php
 
-namespace Tests\Unit;
-
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Tests\TestCase;
-
-class ExampleTest extends TestCase
-{
+class UnitTest extends \PHPUnit\Framework\TestCase {
     /**
-     * A basic test example.
+     * A basic unit test example.
      * 
      * @return void
      */
@@ -17,5 +11,8 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+
+        $response->assertSeeText('Hi from index');
     }
+
 }
