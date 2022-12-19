@@ -112,13 +112,7 @@ foreach($results as $result)
 	</div>
 </div>
 
-<?php include('includes/footer.php');?>
-
-<?php include('includes/signup.php');?>			
-
-<?php include('includes/signin.php');?>			
-
-<?php include('includes/write-us.php');?>
+<
 </body>
 </html>
 <?php } ?>
