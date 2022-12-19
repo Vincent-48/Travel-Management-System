@@ -36,7 +36,12 @@ if($df>1)
 $status=2;
 $cancelby='u';
 $sql = "UPDATE tblbooking SET status=:status,CancelledBy=:cancelby WHERE UserEmail=:email and BookingId=:bid";
-
+$query = $dbh->prepare($sql);
+$query -> bindParam(':status',$status, PDO::PARAM_STR);
+$query -> bindParam(':cancelby',$cancelby , PDO::PARAM_STR);
+$query-> bindParam(':email',$email, PDO::PARAM_STR);
+$query-> bindParam(':bid',$bid, PDO::PARAM_STR);
+$query -> execute();
 
 $msg="Booking Cancelled successfully";
 }
